@@ -4,33 +4,36 @@ public class Sketch extends PApplet {
 	
 	
   /**
-   * Called once at the beginning of execution, put your size all in this method
+   * Draw a house
+   * @author:n.judd
    */
-  public void settings() {
-	// put your size call here
-    size(400, 400);
+
+  // size of the image
+   public void settings() {
+    size(600, 600);
   }
 
-  /** 
-   * Called once at the beginning of execution.  Add initial set up
-   * values here i.e background, stroke, fill etc.
-   */
+  // sets background colour
   public void setup() {
-    background(210, 255, 173);
+    background(66, 182, 245);
   }
 
-  /**
-   * Called repeatedly, anything drawn to the screen goes here
-   */
+  // draws house
   public void draw() {
-	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
-
+    // base and ceiling
     stroke(255);
-    line(50, 125, 70, 50);  
+    line(175, 550, 425, 550);
+    line(175, 325, 425, 325);
+    // walls
+    line(175, 550, 175, 325);
+    line(425, 550, 425, 325);
+    // roof
+    triangle(175, 325, 425, 325, 300, 200);
+    // door
+    line(275, 475, 275, 550);
+    line(325, 475, 325, 550);
+    line(275, 475, 325, 475);
+    // doornob
+    ellipse(315, 515, 8, 8);
   }
-  
-  // define other methods down here.
 }
